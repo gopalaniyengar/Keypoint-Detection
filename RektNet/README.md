@@ -4,7 +4,7 @@ Replace the files in the MIT Repository with the files available here. The chang
 
 ## Project Structure
 
-* Clone the parent repository 'Keypoint-Detection'.
+* Clone the [parent repository](https://github.com/gopalaniyengar/Keypoint-Detection "Keypoint-Detection").
 * Clone [MIT Driverless repository](https://github.com/cv-core/MIT-Driverless-CV-TrainingInfra) within it (say 'MITRepo').
 * Replace the following files in ```MITRepo/RektNet/``` with the versions uploaded here: 
 	* ```dataset.py```
