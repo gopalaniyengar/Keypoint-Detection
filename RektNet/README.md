@@ -2,64 +2,43 @@
 
 Replace the files in the MIT Repository with the files available here. The changes made are to facilitate running the model on a local computer, as opposed to Colab. Another objective was to obtain the keypoints as pixel coordinates and save them to an Excel file.
 
-## Getting Started
-
-### Project Structure
+## Project Structure
 
 * Clone the parent repository 'Keypoint-Detection'.
-* Clone MIT Driverless' repository within it (say 'MITRepo').
+* Clone [MIT Driverless repository](https://github.com/cv-core/MIT-Driverless-CV-TrainingInfra) within it (say 'MITRepo').
 * Replace the following files in ```MITRepo/RektNet/``` with the versions uploaded here: 
 	* ```dataset.py```
 	* ```detect.py```
 	* ```train_eval.py```
 	* ```utils.py```
-* Unzip the [RektNet Dataset](https://drive.google.com/file/d/1PblXu77314Ah6SjkRu2SrCqR_oRz4dBA/view?usp=sharing "Drive Link to Version Used") in ```RektNet/dataset/```
-* Copy the [Labels File](https://docs.google.com/spreadsheets/d/1kBM-sWIrZzb8jPE5Fdvs2cy0g7wDBmVceY-dTCsz1Qg/edit?usp=sharing "Drive Link to Version Used") to ```RektNet/dataset/```
+* Unzip the [RektNet Dataset](https://drive.google.com/file/d/1PblXu77314Ah6SjkRu2SrCqR_oRz4dBA/view?usp=sharing "Drive Link to Version Used") in ```./MITRepo/RektNet/dataset/```.
+* Copy the [Labels File](https://docs.google.com/spreadsheets/d/1kBM-sWIrZzb8jPE5Fdvs2cy0g7wDBmVceY-dTCsz1Qg/edit?usp=sharing "Drive Link to Version Used") to ```./MITRepo/RektNet/dataset/```.
+* Refer [Changes Made] to change some absolute path variables. 
 
-### Installing
+## Execution
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
+* Execution performed in IDE Terminal.
+* Navigate to ```./MITRepo/RektNet/```
+* __Training Command__: Default training with Geo Loss included (optimal hyperparameters as obtained from MIT-Driverless' Paper). Also visualizes Average Keypoint MSE vs BB size distribution in ```./MITRepo/RektNet/logs/rektnet_validation.txt```.
 ```
-code blocks for commands
+ python train_eval.py --study_name <name of training instance here>
 ```
-
-## Help
-
-Any advise for common problems or issues.
+* Weights are saved to ```./MITRepo/RektNet/outputs/```
+* __Inference Command__: Default inference with image output saved to ```./MITRepo/RektNet/outputs/visualization/```.
 ```
-command to run if program contains helper info
+ python detect.py --model "./MITRepo/RektNet/outputs/<path to weights file>" --img <path to input image>
 ```
 
-## Authors
+## Changes Made
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* ```utils.py```: Added exception handling, functionality to return points as pixel coordinates in ```vis_hm_and_save()```.
+* ```train_eval.py```: 
+	* _line 143_- File opening mode changed to facilitate creation of file if it doesn't exist.
+	* _lines 198, 200_- Changed default path.
+	* _lines 211, 212, 217_- Changed default argument values.
+* ```dataset.py```: Resolved problem in image path referencing.
+* ```detect.py```:
+	* _lines 40-43_- Attempting to load ```.onnx``` models as well, not fully implemented.
+	* _lines 55-58_- Console display changes.
+	* _lines 63-71_- Detected keypoints as Excel file output.
+	* _line 84_- Changed default path.
