@@ -9,10 +9,10 @@ Replace the files in the MIT Repository with the files available here. The chang
 * Clone the parent repository 'Keypoint-Detection'.
 * Clone MIT Driverless' repository within it (say 'MITRepo').
 * Replace the following files in ```MITRepo/RektNet/``` with the versions uploaded here: 
-		* ```dataset.py```
-		* ```detect.py```
-		* ```train_eval.py```
-		* ```utils.py```
+	* ```dataset.py```
+	* ```detect.py```
+	* ```train_eval.py```
+	* ```utils.py```
 * 
 
 ### Installing
