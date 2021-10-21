@@ -1,11 +1,64 @@
-Find the files:
+# RektNet Files
 
-A. train_eval.py
+Replace the files in the MIT Repository with the files available here. The changes made are to facilitate running the model on a local computer, as opposed to Colab. Another objective was to obtain the keypoints as pixel coordinates and save them to an Excel file.
 
-B. detect.py
+## Getting Started
 
-C. utils.py
+### Project Structure
 
-D. dataset.py
+* Clone the parent repository 'Keypoint-Detection'.
+* Clone MIT Driverless' repository within it (say 'MITRepo').
+* Replace the following files in ```MITRepo/RektNet/``` with the versions uploaded here: 
+		* ```dataset.py```
+		* ```detect.py```
+		* ```train_eval.py```
+		* ```utils.py```
+* 
 
-and the corresponding changes from the original RektNet repo in MIT-Driverless' code.
+### Installing
+
+* How/where to download your program
+* Any modifications needed to be made to files/folders
+
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
+code blocks for commands
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+## Version History
+
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [dbader](https://github.com/dbader/readme-template)
+* [zenorocha](https://gist.github.com/zenorocha/4526327)
+* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
