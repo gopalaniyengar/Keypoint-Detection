@@ -13,7 +13,8 @@ Replace the files in the MIT Repository with the files available here. The chang
 	* ```detect.py```
 	* ```train_eval.py```
 	* ```utils.py```
-* 
+* Unzip the [RektNet Dataset](https://drive.google.com/file/d/1PblXu77314Ah6SjkRu2SrCqR_oRz4dBA/view?usp=sharing "Drive Link to Version Used") in ```RektNet/dataset/```
+* Copy the [Labels File](https://docs.google.com/spreadsheets/d/1kBM-sWIrZzb8jPE5Fdvs2cy0g7wDBmVceY-dTCsz1Qg/edit?usp=sharing "Drive Link to Version Used) to ```RektNet/dataset/```
 
 ### Installing
 
