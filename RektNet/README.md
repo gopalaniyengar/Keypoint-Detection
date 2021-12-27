@@ -31,7 +31,7 @@ Replace the files in the MIT Repository with the files available here. The chang
 
 ## Changes Made
 
-* ```utils.py```: Added exception handling, functionality to return points as pixel coordinates in ```vis_hm_and_save()```.
+* ```utils.py```: Added exception handling, functionality to return points as pixel coordinates in ```vis_tensor_and_save()```.
 * ```train_eval.py```: 
 	* _line 143_- File opening mode changed to facilitate creation of file if it doesn't exist.
 	* _lines 198, 200_- Changed default path.
